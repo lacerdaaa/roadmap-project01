@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro - Validação Cap 1 e 2</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Cadastro</h1>
+            <p>Projeto de Validação: Capítulos 1 e 2 - Variáveis e Tipos de Dados</p>
+        </div>
+
+        <div class="content">
+            <div class="validation-info">
+                <div class="validation-title">O que este projeto valida:</div>
+                <strong>Capítulo 1:</strong> Uso de let, const, var, nomenclatura, escopo<br>
+                <strong>Capítulo 2:</strong> Tipos primitivos (string, number, boolean), objetos, arrays, conversões
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalUsers">0</div>
+                    <div>Usuários</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="adultUsers">0</div>
+                    <div>Maiores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="activeUsers">0</div>
+                    <div>Ativos</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Cadastro de Usuário</h2>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <div class="error" id="nomeError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="1" max="120" required>
+                        <div class="error" id="idadeError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profissao">Profissão:</label>
+                        <select id="profissao" name="profissao" required>
+                            <option value="">Selecione...</option>
+                            <option value="Desenvolvedor">Desenvolvedor</option>
+                            <option value="Designer">Designer</option>
+                            <option value="Analista">Analista</option>
+                            <option value="Gerente">Gerente</option>
+                            <option value="Estudante">Estudante</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="ativo" name="ativo" checked>
+                            Usuário ativo
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn">Cadastrar Usuário</button>
+                    <button type="button" class="btn btn-secondary" onclick="limparFormulario()">Limpar</button>
+                </form>
+            </div>
+
+            <div class="users-section">
+                <h2>Usuários Cadastrados</h2>
+                <button class="btn btn-secondary" onclick="ordenarUsuarios()">Ordenar por Idade</button>
+                <button class="btn btn-secondary" onclick="filtrarAtivos()">Mostrar Apenas Ativos</button>
+                <button class="btn btn-secondary" onclick="mostrarTodos()">Mostrar Todos</button>
+                <button class="btn btn-secondary" onclick="limparTodos()">Limpar Todos</button>
+                
+                <div id="usersList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
