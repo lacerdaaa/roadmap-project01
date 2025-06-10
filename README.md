@@ -6,8 +6,9 @@ Este projeto é um sistema simples de cadastro de usuários que demonstra concei
 
 ## Estrutura do Projeto
 
-- `index.html`: arquivo principal com HTML, CSS embutido e JavaScript.
-- Tudo está contido em um único arquivo para facilitar a visualização e testes.
+- `index.html`: arquivo principal que importa a estilização e a lógica.
+- `style.css`: arquivo de estilização.
+- `script.js`: arquivo que contém a lógica da aplicação.
 
 ---
 
@@ -110,4 +111,4 @@ Este projeto serve como exemplo didático para aplicar conceitos básicos de pro
 
 ## Autor
 
-Projeto criado para demonstração de conceitos básicos de JavaScript e manipulação DOM.
+Projeto criado por Eduardo Lacerda, para o roadmap de javascript.
